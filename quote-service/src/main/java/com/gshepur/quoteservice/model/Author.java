@@ -1,5 +1,7 @@
 package com.gshepur.quoteservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -25,6 +27,7 @@ public class Author {
     private String emailId;
 
     @OneToMany(mappedBy = "author")
+    @JsonIgnoreProperties(value = {"author"}, allowSetters = true)
     private List<Quote> quotes;
 
     public Integer getId() {

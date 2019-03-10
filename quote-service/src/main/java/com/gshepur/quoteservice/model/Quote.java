@@ -1,5 +1,7 @@
 package com.gshepur.quoteservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -16,7 +18,8 @@ public class Quote {
     private String quoteText;
 
     @ManyToOne
-    @JoinColumn(name = "author_id", nullable = true)
+    @JoinColumn(name = "author_id", nullable = false)
+    @JsonIgnoreProperties(value =  {"quotes"}, allowSetters=true)
     private Author author;
 
     @Column(name = "date")
