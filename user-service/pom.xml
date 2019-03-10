@@ -3,10 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.3.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<artifactId>user-quote-recommendation-parent</artifactId>
+		<groupId>com.gshepur</groupId>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>com.gshepur</groupId>
 	<artifactId>user-service</artifactId>
@@ -37,6 +36,11 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.gshepur</groupId>
+			<artifactId>user-quote-common</artifactId>
+			<version>${user.quote.common.version}</version>
 		</dependency>
 	</dependencies>
 

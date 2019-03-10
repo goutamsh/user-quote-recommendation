@@ -1,4 +1,4 @@
-package com.gshepur.userservice.model;
+package com.gshepur.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

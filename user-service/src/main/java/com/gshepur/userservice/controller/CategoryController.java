@@ -1,6 +1,6 @@
 package com.gshepur.userservice.controller;
 
-import com.gshepur.userservice.model.Category;
+import com.gshepur.entity.Category;
 import com.gshepur.userservice.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

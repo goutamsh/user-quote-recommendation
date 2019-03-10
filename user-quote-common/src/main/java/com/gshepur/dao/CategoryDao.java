@@ -1,6 +1,6 @@
-package com.gshepur.userservice.dao;
+package com.gshepur.dao;
 
-import com.gshepur.userservice.model.Category;
+import com.gshepur.entity.Category;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CategoryDao extends CrudRepository<Category, Integer>{

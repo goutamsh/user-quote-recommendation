@@ -1,6 +1,6 @@
-package com.gshepur.quoteservice.dao;
+package com.gshepur.dao;
 
-import com.gshepur.quoteservice.model.Quote;
+import com.gshepur.entity.Quote;
 import org.springframework.data.repository.CrudRepository;
 
 

@@ -1,4 +1,4 @@
-package com.gshepur.quoteservice.model;
+package com.gshepur.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

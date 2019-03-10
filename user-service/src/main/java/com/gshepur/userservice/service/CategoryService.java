@@ -1,7 +1,7 @@
 package com.gshepur.userservice.service;
 
-import com.gshepur.userservice.dao.CategoryDao;
-import com.gshepur.userservice.model.Category;
+import com.gshepur.dao.CategoryDao;
+import com.gshepur.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

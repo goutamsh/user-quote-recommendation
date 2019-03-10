@@ -1,6 +1,6 @@
-package com.gshepur.userservice.dao;
+package com.gshepur.dao;
 
-import com.gshepur.userservice.model.User;
+import com.gshepur.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserDao extends CrudRepository<User, Integer> {

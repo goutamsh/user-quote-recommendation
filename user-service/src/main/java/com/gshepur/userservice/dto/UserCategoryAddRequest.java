@@ -1,7 +1,7 @@
 package com.gshepur.userservice.dto;
 
-import com.gshepur.userservice.model.Category;
-import com.gshepur.userservice.model.User;
+import com.gshepur.entity.Category;
+import com.gshepur.entity.User;
 
 import java.util.List;
 

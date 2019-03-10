@@ -1,7 +1,7 @@
 package com.gshepur.quoteservice.service;
 
-import com.gshepur.quoteservice.dao.AuthorDao;
-import com.gshepur.quoteservice.model.Author;
+import com.gshepur.dao.AuthorDao;
+import com.gshepur.entity.Author;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

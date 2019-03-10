@@ -1,6 +1,6 @@
 package com.gshepur.quoteservice.controller;
 
-import com.gshepur.quoteservice.model.Author;
+import com.gshepur.entity.Author;
 import com.gshepur.quoteservice.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

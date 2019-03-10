@@ -9,6 +9,7 @@
         <module name="quote-service" />
         <module name="user-recommendation-service" />
         <module name="user-service" />
+        <module name="userquotecommon" />
       </profile>
     </annotationProcessing>
   </component>
