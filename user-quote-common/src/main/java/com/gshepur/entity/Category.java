@@ -26,6 +26,10 @@ public class Category {
     @JsonIgnoreProperties(value = {"categories"}, allowSetters = true)
     private Set<User> users = new HashSet<>();
 
+    @ManyToMany(mappedBy = "categories")
+    @JsonIgnoreProperties(value = {"categories"}, allowSetters = true)
+    private Set<Quote> quotes;
+
     public Integer getId() {
         return id;
     }
@@ -56,5 +60,13 @@ public class Category {
 
     public void setUsers(Set<User> users) {
         this.users = users;
+    }
+
+    public Set<Quote> getQuotes() {
+        return quotes;
+    }
+
+    public void setQuotes(Set<Quote> quotes) {
+        this.quotes = quotes;
     }
 }

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "quote")
@@ -21,6 +22,13 @@ public class Quote {
     @JoinColumn(name = "author_id", nullable = false)
     @JsonIgnoreProperties(value =  {"quotes"}, allowSetters=true)
     private Author author;
+
+    @ManyToMany
+    @JoinTable(name = "quote_category",
+        joinColumns = {@JoinColumn(name = "quote_id")},
+        inverseJoinColumns = {@JoinColumn(name = "category_id")})
+    @JsonIgnoreProperties(value = {"quotes"}, allowSetters = true)
+    private Set<Category> categories;
 
     @Column(name = "date")
     private Date date;
@@ -55,5 +63,13 @@ public class Quote {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 }
