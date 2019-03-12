@@ -1,6 +1,7 @@
 package com.gshepur.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -13,16 +14,20 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
+    @ApiModelProperty(notes = "The database generated ID")
     private Integer id;
 
     @Column(name = "first_name")
+    @ApiModelProperty(notes = "First name")
     private String firstName;
 
 
     @Column(name = "last_name")
+    @ApiModelProperty(notes = "Last name")
     private String lastName;
 
     @Column(name = "email_id")
+    @ApiModelProperty(notes = "Email ID")
     private String emailId;
 
     @ManyToMany
@@ -31,6 +36,7 @@ public class User {
             inverseJoinColumns = {@JoinColumn(name = "category_id")}
     )
     @JsonIgnoreProperties(value = {"users"}, allowSetters = true)
+    @ApiModelProperty(notes = "Categories")
     private Set<Category> categories = new HashSet<>();
 
     public Integer getId() {

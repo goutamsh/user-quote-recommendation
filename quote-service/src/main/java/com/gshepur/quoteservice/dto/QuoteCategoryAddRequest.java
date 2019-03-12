@@ -2,13 +2,16 @@ package com.gshepur.quoteservice.dto;
 
 import com.gshepur.entity.Category;
 import com.gshepur.entity.Quote;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
 
 public class QuoteCategoryAddRequest {
 
+    @ApiModelProperty(notes = "Quote")
     private Quote quote;
 
+    @ApiModelProperty(notes = "List of categories")
     private List<Category> categoryList;
 
     public Quote getQuote() {

@@ -31,7 +31,7 @@ public class QuoteController {
     }
 
     @PostMapping("/assignCategory")
-    public boolean assignCategoryToQuote(@RequestBody QuoteCategoryAddRequest quoteCategoryAddRequest){
+    public Boolean assignCategoryToQuote(@RequestBody QuoteCategoryAddRequest quoteCategoryAddRequest){
 
         quoteService.assignCategoryToQuote(quoteCategoryAddRequest.getQuote(), quoteCategoryAddRequest.getCategoryList());
         return true;

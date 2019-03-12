@@ -14,17 +14,17 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping("/")
+    @GetMapping(path = "/", produces = "application/json")
     public Iterable<Category> getAllCategories(){
         return categoryService.getAllCategories();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(path = "/{id}", produces = "application/json")
     public Optional<Category> getCategoryById(@PathVariable int id){
         return categoryService.getCategoryById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping(path = "/", produces = "application/json")
     public Category saveCategory(@RequestBody Category category){
         return categoryService.saveCategory(category);
     }

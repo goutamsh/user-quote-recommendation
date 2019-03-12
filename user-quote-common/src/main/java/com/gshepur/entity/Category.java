@@ -1,6 +1,7 @@
 package com.gshepur.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -14,20 +15,25 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "category_id")
+    @ApiModelProperty(notes = "The database generated ID")
     private Integer id;
 
     @Column(name = "name")
+    @ApiModelProperty(notes = "Category name")
     private String name;
 
     @Column(name = "create_date")
+    @ApiModelProperty(notes = "Category date")
     private Date createDate;
 
     @ManyToMany(mappedBy = "categories")
     @JsonIgnoreProperties(value = {"categories"}, allowSetters = true)
+    @ApiModelProperty(notes = "Category users")
     private Set<User> users = new HashSet<>();
 
     @ManyToMany(mappedBy = "categories")
     @JsonIgnoreProperties(value = {"categories"}, allowSetters = true)
+    @ApiModelProperty(notes = "Category quotes")
     private Set<Quote> quotes;
 
     public Integer getId() {
