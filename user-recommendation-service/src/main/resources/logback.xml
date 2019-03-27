@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="DEV_HOME" value="c:/app0" />
+    <!--<property name="DEV_HOME" value="c:/app0" />
 
     <appender name="FILE-AUDIT"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -13,7 +13,7 @@
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- rollover daily -->
+            &lt;!&ndash; rollover daily &ndash;&gt;
             <fileNamePattern>${DEV_HOME}/archived/user-recommendation-service.%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
@@ -32,5 +32,5 @@
     <root level="info">
         <appender-ref ref="FILE-AUDIT" />
     </root>
-
+-->
 </configuration>
