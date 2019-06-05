@@ -1,0 +1,25 @@
+!***> classpath
+!pomFile pom.xml
+
+*!
+
+!define TEST_SYSTEM {slim}
+| com.gshepur.AddOperation |
+| numberA | numberB | result? |
+| 10 | 2 | 12 |
+| 3 | 4 | 7 |
+| 5 | 4 | 9 |
+
+Create User
+
+| com.gshepur.UsersFixture |
+| firstName | lastName | emailId | createUser? | id? |
+| Venkat | Subbu | venkat@gmail.com | true | $venkat_id= |
+| Kenney | McDowel | kenny@gmail.com | true | $kenny_id= |
+
+Fetch User By ID
+
+| com.gshepur.UsersFixture |
+| id | fetchUser? | firstName? | lastName? | emailId? |
+| $venkat_id | true | Venkat | Subbu | venkat@gmail.com |
+| $kenny_id | true | Kenney | McDowel | kenny@gmail.com |
