@@ -39,8 +39,12 @@
 * We have used FitNesse *maven-classpath-plugin* plugin for refrering to class path from pom.xml dependencies
 * FitNesse standalone service is started by using *exec-maven-plugin* plugin
 * The output of running integration tests can be found in [screnshot](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/FitnesseOutputScrenshot.JPG)
-
-## Issues Faced while developing
+* Steps to run FitNesse (Start user-service springboot application)
+   * cd to fitnesse-test module
+   * mvn exec:exec
+   * Open local fitnesse webpage at http://localhost:9000/UserServiceSuite.UserTest
+   * Click on Test button to run integration tests
+## Issues Faced while developing    
 
 * Issue with infinite recursion when fetching  hibernate one to many relationship
     - Used @JsonIgnoreProperties which ignores the properties fetching recursively by jackson when populating the child properties
