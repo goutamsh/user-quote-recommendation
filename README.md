@@ -27,6 +27,17 @@
 * Created [*persistence-user-quote.properties*](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-quote-common/src/test/resources/persistence-user-quote.properties) under /src/test/resources folder
 * Created [*UserQuoteTestConfig.java*](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-quote-common/src/test/java/com/gshepur/dao/UserQuoteTestConfig.java) bean config file in /src/test
 * Finally Junit tests in [*AuthorDaoTest.java*](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-quote-common/src/test/java/com/gshepur/dao/AuthorDaoTest.java)
+
+## Integration testing with Fitnesse
+* FitNesse is a wiki based tool for integration testing. 
+* Consists of 2 test systems Fit and Slim. Slim is lightweight protocol compared to Fit. Here we have use Slim.
+* Integration tests are inder [Fitnesse progect](https://github.com/goutamsh/user-quote-recommendation/tree/master/fitnesse-test)
+* The integration tests are defined in wiki file [UserTest](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/FitNesseRoot/UserServiceSuite/UserTest/content.txt)
+* This actually refers to Fixture Java file Called [UserFixture](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/src/test/java/com/gshepur/UsersFixture.java)
+* UserFixture java class is nothing but a client to actual rest service. Passes the values from wiki to actual service and returns the response back, the output is then validated back in wiki file
+* We have used Fitnesse *maven-classpath-plugin* plugin for refrering to class path from pom.xml dependencies
+* Fitnesse standalone service is started by using *exec-maven-plugin* plugin
+*
 ## Issues Faced while developing
 
 * Issue with infinite recursion when fetching  hibernate one to many relationship
