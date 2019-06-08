@@ -24,20 +24,21 @@ public class UsersFixture {
         WebResource webResource = client
                 .resource("http://localhost:8091/users/");
 
-        User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setEmailId(emailId);
+        User userRequest = new User();
+        userRequest.setFirstName(firstName);
+        userRequest.setLastName(lastName);
+        userRequest.setEmailId(emailId);
 
         Gson gson = new Gson();
 
-        String input = gson.toJson(user);
+        String input = gson.toJson(userRequest);
 
         ClientResponse response = webResource.type("application/json")
                 .post(ClientResponse.class, input);
 
-        user = response.getEntity(User.class);
+        String userString = response.getEntity(String.class);
 
+        user = gson.fromJson(userString, User.class);
         return true;
     }
 
@@ -55,7 +56,10 @@ public class UsersFixture {
         ClientResponse response = webResource.accept("application/json")
                 .get(ClientResponse.class);
 
-        user = response.getEntity(User.class);
+        String userString = response.getEntity(String.class);
+        Gson gson = new Gson();
+
+        user = gson.fromJson(userString, User.class);
 
         return true;
     }
@@ -76,6 +80,17 @@ public class UsersFixture {
         this.id = id;
     }
 
+    public String firstName(){
+        return user.getFirstName();
+    }
+
+    public String lastName(){
+        return user.getLastName();
+    }
+
+    public String emailId(){
+        return user.getEmailId();
+    }
 
     public static void main(String[] args) {
 
