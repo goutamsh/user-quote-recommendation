@@ -28,16 +28,18 @@
 * Created [*UserQuoteTestConfig.java*](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-quote-common/src/test/java/com/gshepur/dao/UserQuoteTestConfig.java) bean config file in /src/test
 * Finally Junit tests in [*AuthorDaoTest.java*](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-quote-common/src/test/java/com/gshepur/dao/AuthorDaoTest.java)
 
-## Integration testing with Fitnesse
+## Integration testing with FitNesse
 * FitNesse is a wiki based tool for integration testing. 
 * Consists of 2 test systems Fit and Slim. Slim is lightweight protocol compared to Fit. Here we have use Slim.
-* Integration tests are inder [Fitnesse progect](https://github.com/goutamsh/user-quote-recommendation/tree/master/fitnesse-test)
+* We can define Test Suites and Test wiki pages.
+* Integration tests are under [Fitnesse progect](https://github.com/goutamsh/user-quote-recommendation/tree/master/fitnesse-test)
 * The integration tests are defined in wiki file [UserTest](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/FitNesseRoot/UserServiceSuite/UserTest/content.txt)
 * This actually refers to Fixture Java file Called [UserFixture](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/src/test/java/com/gshepur/UsersFixture.java)
 * UserFixture java class is nothing but a client to actual rest service. Passes the values from wiki to actual service and returns the response back, the output is then validated back in wiki file
-* We have used Fitnesse *maven-classpath-plugin* plugin for refrering to class path from pom.xml dependencies
-* Fitnesse standalone service is started by using *exec-maven-plugin* plugin
-*
+* We have used FitNesse *maven-classpath-plugin* plugin for refrering to class path from pom.xml dependencies
+* FitNesse standalone service is started by using *exec-maven-plugin* plugin
+* The output of running integration tests can be found in [screnshot](https://github.com/goutamsh/user-quote-recommendation/blob/master/fitnesse-test/FitnesseOutputScrenshot.JPG)
+
 ## Issues Faced while developing
 
 * Issue with infinite recursion when fetching  hibernate one to many relationship
