@@ -44,6 +44,34 @@
    * mvn exec:exec
    * Open local fitnesse webpage at http://localhost:9000/UserServiceSuite.UserTest
    * Click on Test button to run integration tests
+   
+## Api Documentation with Swagger
+* Followed [link](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) to setup swagger for rest endpoints
+* Add below maven dependencies in pom.xml
+
+        <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.9.2</version>
+                <scope>compile</scope>
+            </dependency>
+
+* Add Swagger configuration [SwaggerConfig]()
+* After starting springboot application we can access swagger json at
+
+    http://localhost:8091/v2/api-docs
+ 
+* Swagger UI can be accessed at 
+
+    http://localhost:8091/swagger-ui.html
+       
+
 ## Issues Faced while developing    
 
 * Issue with infinite recursion when fetching  hibernate one to many relationship
