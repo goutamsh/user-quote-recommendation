@@ -62,7 +62,7 @@
                 <scope>compile</scope>
             </dependency>
 
-* Add Swagger configuration [SwaggerConfig]()
+* Add Swagger configuration [SwaggerConfig](https://github.com/goutamsh/user-quote-recommendation/blob/master/user-service/src/main/java/com/gshepur/userservice/config/SwaggerConfig.java)
 * After starting springboot application we can access swagger json at
 
     http://localhost:8091/v2/api-docs
