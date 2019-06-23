@@ -78,4 +78,5 @@
     - Used @JsonIgnoreProperties which ignores the properties fetching recursively by jackson when populating the child properties
 * Connection issue with DB because of timezone setting.
     - Resolved by appending timezone setting in connection url like "?serverTimezone=UTC"
-   
+* While running fitnesse test project faced issue related to maven plugins version probably due to inheriting from parent pom.xml some plugins were fetched which were incompatible 
+    - Removed inheriting from parent maven project i.e user-quote-recommendation-parent 
